@@ -1,0 +1,43 @@
+{% include 'navbar.html' %}
+
+<h1>home templates</h1>
+
+{% block content %}
+<div class = "home-container">
+
+    <div>
+        <h5> {{movie_count}} Movies Available</h5>
+        <h3>Browse Movies</h3>
+        <hr> 
+
+        <div>
+            <a href="{% url 'home' %}">All</a>
+        </div>
+
+        {% for movie in Movies %}
+        <div>
+            <a href= "{% url 'home' %}?q={{movie.name}}">{{movie.movie_name}}</a>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <div>  
+        <a href="{% url 'createpage' %}"> Upload Movie</a>
+        <hr>
+        <div>
+            {% for movie in movies %}
+            <div>
+                <span>@{{movie.owner.username }}</span>
+                <a><h5>{{movie.id}} -- <a href="{% url 'moviepage' movie.id %}">{{movie.movie_name}}</a></h5>
+                <small>{{movie.movie_name}}</small>
+                <hr>
+            </div>
+            {% endfor %}
+        </div>
+            </div>
+        
+    </div>
+  
+{% endblock content %}
+ 

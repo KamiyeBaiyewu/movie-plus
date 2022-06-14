@@ -1,0 +1,16 @@
+<a href="/">
+  <h1>Movie Logo</h1>
+</a>
+
+<form method="GET" action="{% url 'home' %}">
+  <input type="text" name="q" placeholder=" Find movies.. " />
+</form>
+<hr />
+{% if request.user.is_authenticated %}
+<p>Hello! {{request.user}}</p>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+
+<a href="{% url 'loginpage' %}">login</a>
+{% endif %}
+<hr />

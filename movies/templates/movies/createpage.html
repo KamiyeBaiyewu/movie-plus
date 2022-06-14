@@ -1,0 +1,16 @@
+{% extends 'main.html' %} {% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TUT</title>
+    <style></style>
+  </head>
+  <body>
+    <h2>FORM</h2>
+    <form action="/" method="post">
+      {% csrf_token %} {{ form.as_p}}
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+{% endblock content%}
