@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ena&$s7ysr_j6-ak6vrihm67-uh$6#ti$moyi&e7mlsdukjrzs'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://blooming-reef-33757.herokuapp.com', 127.0.0.1]
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.SecurityMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -121,6 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles') 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
