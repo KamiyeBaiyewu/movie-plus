@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ena&$s7ysr_j6-ak6vrihm67-uh$6#ti$moyi&e7mlsdukjrzs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://blooming-reef-33757.herokuapp.com', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['https://blooming-reef-33757.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
