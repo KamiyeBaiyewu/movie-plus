@@ -1,0 +1,1 @@
+web: gunicorn movieplus.wsgi --log- f ile -
